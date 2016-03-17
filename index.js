@@ -26,6 +26,8 @@ function shouldVendor(module) {
 }
 
 function createVendorChunk(options) {
+  options = options || {};
+
   return new webpack.optimize.CommonsChunkPlugin({
     name: options.name || 'vendor',
     chunks: options.chunks,
